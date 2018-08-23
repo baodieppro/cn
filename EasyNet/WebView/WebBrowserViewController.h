@@ -10,8 +10,8 @@
 #import "SearchViewController.h"
 
 @interface WebBrowserViewController : UIViewController
-/// 需要加载的url
-@property (copy,nonatomic) NSString * needLoadUrlStr;
+/// 需要加载的url请求
+@property (copy,nonatomic) NSURLRequest * needLoadUrlRequest;
 @property (nonatomic,strong) UIImage *thumbImage;
 @property (strong, nonatomic) WKWebView *webView;
 -(void)updateThumbImage;

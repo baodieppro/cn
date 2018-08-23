@@ -20,6 +20,7 @@
 #import "Preference.h"
 #import "BrowserTabsListViewController.h"
 #import "WKYWebView.h"
+#import "NSURLRequest+Easy.h"
 
 @interface WebBrowserViewController ()
 
@@ -71,13 +72,12 @@
     
     [self customWebView];
     
-    NSString *loadUrlStr = @"http://baidu.com";
-    if (self.needLoadUrlStr.length > 0){
-        loadUrlStr = self.needLoadUrlStr;
+    if (self.needLoadUrlRequest){
+        [self.webView loadRequest:self.needLoadUrlRequest];
+    }else{
+        NSURLRequest *homeRequest = [NSURLRequest homeUrlRequest];
+        [self.webView loadRequest:homeRequest];
     }
-    NSURL *url = [[NSURL alloc]initWithString:loadUrlStr];
-    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
-    [self.webView loadRequest:request];
     
 }
 
@@ -154,7 +154,7 @@
     [self.webView.configuration.userContentController addScriptMessageHandler:self name:@"OOFJS"];
     
 }
-
+//MARK: - KVO
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context
 {
     if (object == self.webView){
@@ -193,7 +193,12 @@
 //            });
 
         }else if ([keyPath isEqualToString:@"title"]){
-            NSString *t = [NSString stringWithFormat:@"%@-%@",newStr,self.webView.URL.host];
+            NSString *t = [NSString stringWithFormat:@"%@",newStr];
+            NSString *host = self.webView.URL.host;
+            if (host != nil) {
+                t = [NSString stringWithFormat:@"%@-%@",newStr,host];
+            }
+            
             [self.titleBtn setTitle:t forState:UIControlStateNormal];
         }else if ([keyPath isEqualToString:@"loading"]){
             
@@ -263,11 +268,12 @@
 - (IBAction)onFrowardClick:(UIBarButtonItem *)sender {
     [self.webView goForward];
 }
+
 - (IBAction)onHomeClick:(UIBarButtonItem *)sender {
-    NSURL *url = [[NSURL alloc]initWithString:@"http://baidu.com"];
-    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
+    NSURLRequest *request = [NSURLRequest homeUrlRequest];
     [self.webView loadRequest:request];
 }
+
 -(BOOL)canBecomeFirstResponder
 {
     return YES;
@@ -306,7 +312,8 @@
     [self getWebViewSelectionWithCompletion:^(NSString *result) {
         NSString *urlstr = [NSString stringWithFormat:@"https://m.baidu.com/s?word=%@",[result stringByURLEncode]];
         WebBrowserViewController *web = [BrowserTagsManager createNewBrowser];
-        web.needLoadUrlStr = urlstr;
+        NSURL *url = [NSURL URLWithString:urlstr];
+        web.needLoadUrlRequest = [NSURLRequest requestWithURL:url];
         [[BrowserTagsManager shareInstance].delegate disPlay:web];
     }];
 }
@@ -360,7 +367,6 @@
 @end
 //MARK: - WKScriptMessageHandler
 @implementation WebBrowserViewController(WKScriptMessageHandler)
-//MARK: - WKScriptMessageHandler
 -(void)userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message
 {
     [self handleLongPress:message.body];
@@ -373,6 +379,8 @@
         [self getPicBrowserArray:arg[0]];
     }else if([fun isEqualToString:@"userSelection"]){
         NSLog(@"userSelection");
+    }else if ([fun isEqualToString:@"showSearch"]){
+        [self performSegueWithIdentifier:@"searchVC" sender:self];
     }
 
 }
@@ -493,7 +501,7 @@
     
     UIAlertAction *ac = [UIAlertAction actionWithTitle:@"在新标签打开" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         WebBrowserViewController *web = [self.storyboard instantiateViewControllerWithIdentifier:@"WebBrowserViewController"];
-        web.needLoadUrlStr = url.absoluteString;
+        web.needLoadUrlRequest = [NSURLRequest requestWithURL:url];
         [BrowserTagsManager addNewTag:web display:true];
     }];
     return ac;

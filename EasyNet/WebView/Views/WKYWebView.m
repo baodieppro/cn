@@ -53,7 +53,7 @@
     [self getWebViewSelectionWithCompletion:^(NSString *result) {
         NSString *urlstr = [NSString stringWithFormat:@"https://m.baidu.com/s?word=%@",[result stringByURLEncode]];
         WebBrowserViewController *web = [BrowserTagsManager createNewBrowser];
-        web.needLoadUrlStr = urlstr;
+        web.needLoadUrlRequest = urlstr;
         [[BrowserTagsManager shareInstance].delegate disPlay:web];
     }];
 }

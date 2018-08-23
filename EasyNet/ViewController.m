@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "BrowserTagsManager.h"
 #import "WebBrowserViewController.h"
+#import "NSURLRequest+Easy.h"
 
 @interface ViewController ()<BrowserTagsManagerProtocol>
 //@property (weak, nonatomic) IBOutlet UIView *containerView;

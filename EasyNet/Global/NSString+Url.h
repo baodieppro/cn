@@ -10,4 +10,5 @@
 
 @interface NSString (Url)
 -(BOOL)isURL;
+
 @end

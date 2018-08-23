@@ -23,6 +23,8 @@
 		4776E93C20FDC22D00D419B1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4776E93B20FDC22D00D419B1 /* main.m */; };
 		4787EB2C212AD08100DF3E3E /* WebTagCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4787EB2B212AD08100DF3E3E /* WebTagCollectionViewCell.m */; };
 		4787EB2F212AD14B00DF3E3E /* TagListCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4787EB2E212AD14B00DF3E3E /* TagListCollectionViewController.m */; };
+		4788046B212E5A44004D0E70 /* easynet.html in Resources */ = {isa = PBXBuildFile; fileRef = 4788046A212E5A44004D0E70 /* easynet.html */; };
+		4788046E212E62CE004D0E70 /* NSURLRequest+Easy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4788046D212E62CE004D0E70 /* NSURLRequest+Easy.m */; };
 		47BD202421251E6200C197F4 /* BrowserTabsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47BD202321251E6200C197F4 /* BrowserTabsListViewController.m */; };
 		47BD202821254AA400C197F4 /* LinkElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 47BD202721254AA400C197F4 /* LinkElement.m */; };
 		47BD202B21255F1A00C197F4 /* MBProgressHUD+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 47BD202921255F1A00C197F4 /* MBProgressHUD+Utility.m */; };
@@ -86,6 +88,9 @@
 		4787EB2B212AD08100DF3E3E /* WebTagCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebTagCollectionViewCell.m; sourceTree = "<group>"; };
 		4787EB2D212AD14B00DF3E3E /* TagListCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TagListCollectionViewController.h; sourceTree = "<group>"; };
 		4787EB2E212AD14B00DF3E3E /* TagListCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TagListCollectionViewController.m; sourceTree = "<group>"; };
+		4788046A212E5A44004D0E70 /* easynet.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = easynet.html; sourceTree = "<group>"; };
+		4788046C212E62CE004D0E70 /* NSURLRequest+Easy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSURLRequest+Easy.h"; sourceTree = "<group>"; };
+		4788046D212E62CE004D0E70 /* NSURLRequest+Easy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSURLRequest+Easy.m"; sourceTree = "<group>"; };
 		47BD202221251E6200C197F4 /* BrowserTabsListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BrowserTabsListViewController.h; sourceTree = "<group>"; };
 		47BD202321251E6200C197F4 /* BrowserTabsListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BrowserTabsListViewController.m; sourceTree = "<group>"; };
 		47BD202621254AA400C197F4 /* LinkElement.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinkElement.h; sourceTree = "<group>"; };
@@ -347,6 +352,8 @@
 				47CBD5E02123D57600468705 /* NSString+EasyNet.m */,
 				47F2F2CC212C0F74003E755E /* NSString+Url.h */,
 				47F2F2CD212C0F74003E755E /* NSString+Url.m */,
+				4788046C212E62CE004D0E70 /* NSURLRequest+Easy.h */,
+				4788046D212E62CE004D0E70 /* NSURLRequest+Easy.m */,
 				47CBD5E22123D77500468705 /* Preference.h */,
 				47CBD5E32123D77500468705 /* Preference.m */,
 				47BD2030212572FB00C197F4 /* UIImage+SavingData.h */,
@@ -388,6 +395,7 @@
 		47D8F987212D14E700E18CAA /* JavaScript */ = {
 			isa = PBXGroup;
 			children = (
+				4788046A212E5A44004D0E70 /* easynet.html */,
 				47D8F98F212D377700E18CAA /* ContextMenu.js */,
 				47D8F97F212D14E000E18CAA /* BaiduADBlock.js */,
 				47D8F982212D14E100E18CAA /* EyeProtective.js */,
@@ -498,6 +506,7 @@
 				47D8F9A6212D68CB00E18CAA /* SearchInputView.xib in Resources */,
 				476D418C2122B739006799E8 /* profile2.jpg in Resources */,
 				47BD203B212589D600C197F4 /* 5.jpg in Resources */,
+				4788046B212E5A44004D0E70 /* easynet.html in Resources */,
 				47D8F985212D14E100E18CAA /* FindInPage.js in Resources */,
 				47CBD5D92123CE4500468705 /* BrowserBundle.bundle in Resources */,
 				47BD203D212589D600C197F4 /* 2.jpg in Resources */,
@@ -591,6 +600,7 @@
 				47D8F9AB212D706C00E18CAA /* CharacterSelectView.m in Sources */,
 				4776E92E20FDC22D00D419B1 /* AppDelegate.m in Sources */,
 				47CBD5E42123D77500468705 /* Preference.m in Sources */,
+				4788046E212E62CE004D0E70 /* NSURLRequest+Easy.m in Sources */,
 				47BD2032212572FB00C197F4 /* UIImage+SavingData.m in Sources */,
 				476D418A2122B6BD006799E8 /* MenuViewController.m in Sources */,
 				4787EB2F212AD14B00DF3E3E /* TagListCollectionViewController.m in Sources */,

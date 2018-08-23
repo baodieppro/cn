@@ -68,7 +68,7 @@
 
 - (IBAction)onNewTagClick:(UIButton *)sender {
     WebBrowserViewController *web = [self.storyboard instantiateViewControllerWithIdentifier:@"WebBrowserViewController"];
-    web.needLoadUrlStr = @"";
+    web.needLoadUrlRequest = @"";
     
     [BrowserTagsManager addNewTag:web display:true];
     

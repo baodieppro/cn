@@ -8,6 +8,8 @@
 
 #import "BrowserTagsManager.h"
 #import "ViewController.h"
+#import "NSURLRequest+Easy.h"
+
 @interface BrowserTagsManager()
 
 @end
@@ -56,7 +58,7 @@
 +(WebBrowserViewController *)createNewBrowser{
     
     WebBrowserViewController *web = [[self shareInstance].delegate.storyboard instantiateViewControllerWithIdentifier:@"WebBrowserViewController"];
-    web.needLoadUrlStr = @"";
+    web.needLoadUrlRequest = [NSURLRequest homeUrlRequest];
     return web;
 }
 @end
