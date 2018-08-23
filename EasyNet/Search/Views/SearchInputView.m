@@ -74,7 +74,7 @@ typedef enum : NSUInteger {
 - (void)sliderValueChangedAction:(CharacterSelectView *)slider{
     
     if (self.textField.selectedTextRange.empty) {
-        NSInteger offset = (slider.value - 0.5f) * self.textField.text.length * 2;
+        NSInteger offset = (slider.value - 0.5f) * self.textField.text.length * 10;
         NSInteger labsOffset = labs(offset);
         if ((labsOffset > self.lastThreshold && offset < 0) || (labsOffset < self.lastThreshold && offset > 0)) {
             self.lastThreshold = labsOffset;
@@ -89,6 +89,8 @@ typedef enum : NSUInteger {
             UITextRange *newSelectedRange = [self.textField textRangeFromPosition:newPosition toPosition:newPosition];
             [self.textField setSelectedTextRange:newSelectedRange];
         }
+    }else{
+        //TODO: - 滑动选择需要实现
     }
 }
 

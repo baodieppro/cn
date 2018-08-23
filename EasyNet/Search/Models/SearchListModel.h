@@ -9,7 +9,8 @@
 #import <Foundation/Foundation.h>
 
 typedef NS_ENUM(NSInteger,SearchListModelType){
-    SearchListModelTypePastBoard,//来自剪切板
+    SearchListModelTypePastBoardUrl,//来自剪切板的url
+    SearchListModelTypePastBoardKeyword,//来自剪切板的文字
     SearchListModelTypeCurrentUrl,//当前网页的地址
     SearchListModelTypeHistory,//当前网页的地址
 };

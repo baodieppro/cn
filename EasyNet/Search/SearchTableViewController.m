@@ -9,7 +9,7 @@
 #import "SearchTableViewController.h"
 #import "SearchListModel.h"
 #import "NSString+Url.h"
-
+#import <YYKit.h>
 #import "MBProgressHUD+Utility.h"
 
 @interface SearchTableViewController ()
@@ -27,16 +27,25 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     UIPasteboard *psd  = [UIPasteboard generalPasteboard];
-    if ([psd.string isURL]) {
-        SearchListModel *model = [[SearchListModel alloc]init];
-        model.descTitle = @"你最近复制的网址，点击访问";
-        model.urlStr = psd.string;
-        model.type = SearchListModelTypePastBoard;
-        [self.dataSource addObject:model];
-       
+    for (NSString *str in psd.strings) {
+        if ([str isURL]) {
+            SearchListModel *model = [[SearchListModel alloc]init];
+            model.descTitle = @"你最近复制的网址，点击访问";
+            model.urlStr = str;
+            model.type = SearchListModelTypePastBoardUrl;
+            [self.dataSource addObject:model];
+        }else{
+            SearchListModel *model = [[SearchListModel alloc]init];
+            model.descTitle = @"你最近复制的文字，点击搜索";
+            model.urlStr = str;
+            model.type = SearchListModelTypePastBoardKeyword;
+            [self.dataSource addObject:model];
+        }
     }
     
-    if (self.currentUrlStr.length > 0) {
+    
+    
+    if (self.currentUrlStr.length > 0 && ![self.currentUrlStr hasPrefix:@"file://"]) {
         SearchListModel *model = [[SearchListModel alloc]init];
         model.descTitle = @"当前网页的网址，点击复制";
         model.urlStr = self.currentUrlStr;
@@ -80,8 +89,11 @@
         UIPasteboard *psd = [UIPasteboard generalPasteboard];
         psd.string = model.urlStr;
         [MBProgressHUD showSuccessImage:@"已复制"];
-    }else if (model.type == SearchListModelTypePastBoard){//点击访问
+    }else if (model.type == SearchListModelTypePastBoardUrl){//点击访问
         [self.delegate SearchTableViewControllerClickUrl:model.urlStr];
+    }else if (model.type == SearchListModelTypePastBoardKeyword){//点击搜索
+        NSString* urlstr = [NSString stringWithFormat:@"https://m.baidu.com/s?word=%@",[model.urlStr stringByURLEncode]];
+        [self.delegate SearchTableViewControllerClickUrl:urlstr];
     }
 }
 
