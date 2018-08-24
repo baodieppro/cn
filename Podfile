@@ -11,5 +11,8 @@ pod 'YYKit', '0.9.6'
 pod 'DKNightVersion', '2.4.0'
 #动画卡片
 pod 'iCarousel'
+#图片加载
+pod 'SDWebImage'
+
 end
 

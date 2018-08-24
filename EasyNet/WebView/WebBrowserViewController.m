@@ -21,6 +21,8 @@
 #import "BrowserTabsListViewController.h"
 #import "WKYWebView.h"
 #import "NSURLRequest+Easy.h"
+#import "ImagesBrowserViewController.h"
+
 
 @interface WebBrowserViewController ()
 
@@ -242,7 +244,11 @@
         BrowserTabsListViewController *tag = (BrowserTabsListViewController*)segue.destinationViewController;
         tag.showFromIndex = idx;
         
+    }else if ([segue.identifier isEqualToString:@"ImagesBrowser"]){
+        ImagesBrowserViewController *ibvc = (ImagesBrowserViewController*)segue.destinationViewController;
+        ibvc.imageUrls = allImagesUrl;
     }
+    
 }
 
 
@@ -459,7 +465,7 @@
             return;
         }
         [actionSheetController addAction:[self actionOpenInNewTag:element.link]];
-        [actionSheetController addAction:[self actionBrowserImage]];
+        [actionSheetController addAction:[self actionBrowserImage:self.element.image]];
         [actionSheetController addAction:[self actionCopyLinkUrl:element.link.absoluteString]];
         if (linkText.length > 0){
             [actionSheetController addAction:[self actionCopyLinkText:element.linkText]];
@@ -479,7 +485,7 @@
 //        [actionSheetController addAction:[self actionShare]];
         dialogTitle = self.element.link.absoluteString;
     }else if(self.element.image){
-        [actionSheetController addAction:[self actionBrowserImage]];
+        [actionSheetController addAction:[self actionBrowserImage:self.element.image]];
         [actionSheetController addAction:[self actionSaveImageToPhotos:element.image]];
         [actionSheetController addAction:[self actionSaveImageToEncryption]];
         
@@ -540,9 +546,15 @@
     }];
     return ac;
 }
--(UIAlertAction *)actionBrowserImage{
+-(UIAlertAction *)actionBrowserImage:(NSURL*)imgUrl{
     UIAlertAction *ac = [UIAlertAction actionWithTitle:@"进入看图模式" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        [self performSegueWithIdentifier:@"BrowserPicture" sender:self];
+        
+        ImagesBrowserViewController *imb  = (ImagesBrowserViewController*)[UIStoryboard storyboardWithName:@"ImagesBrowser" bundle:nil].instantiateInitialViewController;
+        imb.imageUrls = allImagesUrl;
+        imb.currentImageUrl = imgUrl.absoluteString;
+        imb.modalPresentationStyle = UIModalPresentationOverFullScreen;
+        [self presentViewController:imb animated:false completion:nil];
+//        [self performSegueWithIdentifier:@"ImagesBrowser" sender:self];
     }];
     return ac;
 }

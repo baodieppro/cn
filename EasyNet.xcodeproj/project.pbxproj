@@ -25,16 +25,16 @@
 		4787EB2F212AD14B00DF3E3E /* TagListCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4787EB2E212AD14B00DF3E3E /* TagListCollectionViewController.m */; };
 		4788046B212E5A44004D0E70 /* easynet.html in Resources */ = {isa = PBXBuildFile; fileRef = 4788046A212E5A44004D0E70 /* easynet.html */; };
 		4788046E212E62CE004D0E70 /* NSURLRequest+Easy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4788046D212E62CE004D0E70 /* NSURLRequest+Easy.m */; };
+		47880472212E6F43004D0E70 /* ImagesBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47880471212E6F43004D0E70 /* ImagesBrowserViewController.m */; };
+		47880475212E9886004D0E70 /* ImagesListCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47880474212E9886004D0E70 /* ImagesListCollectionViewController.m */; };
+		47880477212E9892004D0E70 /* ImagesBrowser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47880476212E9892004D0E70 /* ImagesBrowser.storyboard */; };
+		4788047A212E9F5A004D0E70 /* XYWZoomImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 47880478212E9F5A004D0E70 /* XYWZoomImageView.m */; };
+		4788047E212E9FB2004D0E70 /* ImageBrowserCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4788047D212E9FB2004D0E70 /* ImageBrowserCollectionViewCell.m */; };
 		47BD202421251E6200C197F4 /* BrowserTabsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47BD202321251E6200C197F4 /* BrowserTabsListViewController.m */; };
 		47BD202821254AA400C197F4 /* LinkElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 47BD202721254AA400C197F4 /* LinkElement.m */; };
 		47BD202B21255F1A00C197F4 /* MBProgressHUD+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 47BD202921255F1A00C197F4 /* MBProgressHUD+Utility.m */; };
 		47BD2032212572FB00C197F4 /* UIImage+SavingData.m in Sources */ = {isa = PBXBuildFile; fileRef = 47BD2031212572FB00C197F4 /* UIImage+SavingData.m */; };
 		47BD20352125797A00C197F4 /* BrowserTagsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 47BD20342125797A00C197F4 /* BrowserTagsManager.m */; };
-		47BD203B212589D600C197F4 /* 5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 47BD2036212589D500C197F4 /* 5.jpg */; };
-		47BD203C212589D600C197F4 /* 4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 47BD2037212589D500C197F4 /* 4.jpg */; };
-		47BD203D212589D600C197F4 /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 47BD2038212589D500C197F4 /* 2.jpg */; };
-		47BD203E212589D600C197F4 /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 47BD2039212589D500C197F4 /* 3.jpg */; };
-		47BD203F212589D600C197F4 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 47BD203A212589D500C197F4 /* 1.jpg */; };
 		47CBD5D52123CA7E00468705 /* BrowserTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47CBD5D42123CA7E00468705 /* BrowserTabViewController.m */; };
 		47CBD5D92123CE4500468705 /* BrowserBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 47CBD5D82123CE4500468705 /* BrowserBundle.bundle */; };
 		47CBD5DD2123D0DF00468705 /* TabWebviewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 47CBD5DC2123D0DF00468705 /* TabWebviewDelegate.m */; };
@@ -91,6 +91,16 @@
 		4788046A212E5A44004D0E70 /* easynet.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = easynet.html; sourceTree = "<group>"; };
 		4788046C212E62CE004D0E70 /* NSURLRequest+Easy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSURLRequest+Easy.h"; sourceTree = "<group>"; };
 		4788046D212E62CE004D0E70 /* NSURLRequest+Easy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSURLRequest+Easy.m"; sourceTree = "<group>"; };
+		47880470212E6F43004D0E70 /* ImagesBrowserViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImagesBrowserViewController.h; sourceTree = "<group>"; };
+		47880471212E6F43004D0E70 /* ImagesBrowserViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImagesBrowserViewController.m; sourceTree = "<group>"; };
+		47880473212E9886004D0E70 /* ImagesListCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImagesListCollectionViewController.h; sourceTree = "<group>"; };
+		47880474212E9886004D0E70 /* ImagesListCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImagesListCollectionViewController.m; sourceTree = "<group>"; };
+		47880476212E9892004D0E70 /* ImagesBrowser.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ImagesBrowser.storyboard; sourceTree = "<group>"; };
+		47880478212E9F5A004D0E70 /* XYWZoomImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYWZoomImageView.m; sourceTree = "<group>"; };
+		47880479212E9F5A004D0E70 /* XYWZoomImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYWZoomImageView.h; sourceTree = "<group>"; };
+		4788047C212E9FB2004D0E70 /* ImageBrowserCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageBrowserCollectionViewCell.h; sourceTree = "<group>"; };
+		4788047D212E9FB2004D0E70 /* ImageBrowserCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageBrowserCollectionViewCell.m; sourceTree = "<group>"; };
+		4788047F212EB1C4004D0E70 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		47BD202221251E6200C197F4 /* BrowserTabsListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BrowserTabsListViewController.h; sourceTree = "<group>"; };
 		47BD202321251E6200C197F4 /* BrowserTabsListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BrowserTabsListViewController.m; sourceTree = "<group>"; };
 		47BD202621254AA400C197F4 /* LinkElement.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinkElement.h; sourceTree = "<group>"; };
@@ -101,11 +111,6 @@
 		47BD2031212572FB00C197F4 /* UIImage+SavingData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+SavingData.m"; sourceTree = "<group>"; };
 		47BD20332125797A00C197F4 /* BrowserTagsManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BrowserTagsManager.h; sourceTree = "<group>"; };
 		47BD20342125797A00C197F4 /* BrowserTagsManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BrowserTagsManager.m; sourceTree = "<group>"; };
-		47BD2036212589D500C197F4 /* 5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5.jpg; sourceTree = "<group>"; };
-		47BD2037212589D500C197F4 /* 4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4.jpg; sourceTree = "<group>"; };
-		47BD2038212589D500C197F4 /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
-		47BD2039212589D500C197F4 /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
-		47BD203A212589D500C197F4 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
 		47CBD5D32123CA7E00468705 /* BrowserTabViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BrowserTabViewController.h; sourceTree = "<group>"; };
 		47CBD5D42123CA7E00468705 /* BrowserTabViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BrowserTabViewController.m; sourceTree = "<group>"; };
 		47CBD5D82123CE4500468705 /* BrowserBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = BrowserBundle.bundle; sourceTree = "<group>"; };
@@ -186,11 +191,6 @@
 				476D419B2122D184006799E8 /* WebBrowserViewController.m */,
 				47CBD5D32123CA7E00468705 /* BrowserTabViewController.h */,
 				47CBD5D42123CA7E00468705 /* BrowserTabViewController.m */,
-				47BD203A212589D500C197F4 /* 1.jpg */,
-				47BD2038212589D500C197F4 /* 2.jpg */,
-				47BD2039212589D500C197F4 /* 3.jpg */,
-				47BD2037212589D500C197F4 /* 4.jpg */,
-				47BD2036212589D500C197F4 /* 5.jpg */,
 			);
 			path = WebView;
 			sourceTree = "<group>";
@@ -266,12 +266,13 @@
 		4776E92B20FDC22D00D419B1 /* EasyNet */ = {
 			isa = PBXGroup;
 			children = (
+				4788046F212E6E13004D0E70 /* ImagesBrowser */,
+				47CBD5DE2123D53D00468705 /* Global */,
+				476D41A02122EF88006799E8 /* Vendor */,
 				47D8F988212D17C000E18CAA /* Helper */,
 				47D8F97E212D14C500E18CAA /* Resource */,
 				4787EB1F212A9B9A00DF3E3E /* Tabs */,
 				47CBD5EA2124086100468705 /* Search */,
-				47CBD5DE2123D53D00468705 /* Global */,
-				476D41A02122EF88006799E8 /* Vendor */,
 				476D41962122CBA1006799E8 /* Setting */,
 				476D418F2122C253006799E8 /* Menu */,
 				476D41872122923D006799E8 /* WebView */,
@@ -284,6 +285,7 @@
 				4776E93520FDC22D00D419B1 /* Assets.xcassets */,
 				47CBD5D82123CE4500468705 /* BrowserBundle.bundle */,
 				4776E93720FDC22D00D419B1 /* LaunchScreen.storyboard */,
+				4788047F212EB1C4004D0E70 /* PrefixHeader.pch */,
 				4776E93A20FDC22D00D419B1 /* Info.plist */,
 				4776E93B20FDC22D00D419B1 /* main.m */,
 			);
@@ -313,6 +315,30 @@
 				47F2F2BF212BC01B003E755E /* TabsFlowLayout.m */,
 				4787EB2A212AD08100DF3E3E /* WebTagCollectionViewCell.h */,
 				4787EB2B212AD08100DF3E3E /* WebTagCollectionViewCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4788046F212E6E13004D0E70 /* ImagesBrowser */ = {
+			isa = PBXGroup;
+			children = (
+				4788047B212E9F64004D0E70 /* Views */,
+				47880470212E6F43004D0E70 /* ImagesBrowserViewController.h */,
+				47880471212E6F43004D0E70 /* ImagesBrowserViewController.m */,
+				47880473212E9886004D0E70 /* ImagesListCollectionViewController.h */,
+				47880474212E9886004D0E70 /* ImagesListCollectionViewController.m */,
+				47880476212E9892004D0E70 /* ImagesBrowser.storyboard */,
+			);
+			path = ImagesBrowser;
+			sourceTree = "<group>";
+		};
+		4788047B212E9F64004D0E70 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				47880479212E9F5A004D0E70 /* XYWZoomImageView.h */,
+				47880478212E9F5A004D0E70 /* XYWZoomImageView.m */,
+				4788047C212E9FB2004D0E70 /* ImageBrowserCollectionViewCell.h */,
+				4788047D212E9FB2004D0E70 /* ImageBrowserCollectionViewCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -499,22 +525,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				47D8F990212D377700E18CAA /* ContextMenu.js in Resources */,
-				47BD203E212589D600C197F4 /* 3.jpg in Resources */,
 				4776E93920FDC22D00D419B1 /* LaunchScreen.storyboard in Resources */,
-				47BD203C212589D600C197F4 /* 4.jpg in Resources */,
 				4776E93620FDC22D00D419B1 /* Assets.xcassets in Resources */,
 				47D8F9A6212D68CB00E18CAA /* SearchInputView.xib in Resources */,
 				476D418C2122B739006799E8 /* profile2.jpg in Resources */,
-				47BD203B212589D600C197F4 /* 5.jpg in Resources */,
 				4788046B212E5A44004D0E70 /* easynet.html in Resources */,
 				47D8F985212D14E100E18CAA /* FindInPage.js in Resources */,
 				47CBD5D92123CE4500468705 /* BrowserBundle.bundle in Resources */,
-				47BD203D212589D600C197F4 /* 2.jpg in Resources */,
+				47880477212E9892004D0E70 /* ImagesBrowser.storyboard in Resources */,
 				47D8F986212D14E100E18CAA /* EyeProtective.js in Resources */,
 				47D8F984212D14E100E18CAA /* NoImageModeHelper.js in Resources */,
 				4776E93420FDC22D00D419B1 /* Main.storyboard in Resources */,
 				47D8F983212D14E100E18CAA /* BaiduADBlock.js in Resources */,
-				47BD203F212589D600C197F4 /* 1.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -579,16 +601,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4788047E212E9FB2004D0E70 /* ImageBrowserCollectionViewCell.m in Sources */,
 				476D41922122C26E006799E8 /* MenuCollectionViewCell.m in Sources */,
 				4776E93120FDC22D00D419B1 /* ViewController.m in Sources */,
 				47BD202821254AA400C197F4 /* LinkElement.m in Sources */,
+				47880472212E6F43004D0E70 /* ImagesBrowserViewController.m in Sources */,
 				4787EB2C212AD08100DF3E3E /* WebTagCollectionViewCell.m in Sources */,
 				47CBD5D52123CA7E00468705 /* BrowserTabViewController.m in Sources */,
 				47BD202421251E6200C197F4 /* BrowserTabsListViewController.m in Sources */,
 				47D8F98B212D17CD00E18CAA /* MenuHelper.m in Sources */,
+				47880475212E9886004D0E70 /* ImagesListCollectionViewController.m in Sources */,
 				47CBD5E82123D9EB00468705 /* ENUserAgent.m in Sources */,
 				47BD202B21255F1A00C197F4 /* MBProgressHUD+Utility.m in Sources */,
 				47D8F98E212D1B8A00E18CAA /* WKYWebView.m in Sources */,
+				4788047A212E9F5A004D0E70 /* XYWZoomImageView.m in Sources */,
 				47F2F2C6212BFFD1003E755E /* SearchTableViewController.m in Sources */,
 				476D41952122C3C2006799E8 /* MenuItemsCollectionViewController.m in Sources */,
 				47F2E90D21241D4300B071BF /* UIAlertController+Blocks.m in Sources */,
